@@ -20,19 +20,22 @@ init:
 
 # Rebase all submodules against their upstream repositories
 rebase-all:
-    for dir in $(git submodule --quiet foreach --recursive 'echo $path'); do \
-      echo "Rebasing $dir..."; \
-      cd "$dir" || exit 1; \
-      git fetch upstream; \
-      if git show-ref --verify --quiet refs/remotes/upstream/main; then \
-        git rebase upstream/main || { echo "Rebase failed in $dir"; exit 1; }; \
-      elif git show-ref --verify --quiet refs/remotes/upstream/master; then \
-        git rebase upstream/master || { echo "Rebase failed in $dir"; exit 1; }; \
-      else \
-        echo "Neither upstream/main nor upstream/master found in $dir"; \
-        exit 1; \
-      fi; \
-      cd - > /dev/null || exit 1; \
+    #!/usr/bin/env bash
+
+    for dir in $(git submodule --quiet foreach --recursive 'echo $path'); do
+      echo;
+      echo "Rebasing $dir...";
+      cd "$dir" || exit 1;
+      git fetch upstream;
+      if git show-ref --verify --quiet refs/remotes/upstream/main; then
+        git rebase upstream/main || { echo "Rebase failed in $dir"; exit 1; };
+      elif git show-ref --verify --quiet refs/remotes/upstream/master; then
+        git rebase upstream/master || { echo "Rebase failed in $dir"; exit 1; };
+      else
+        echo "Neither upstream/main nor upstream/master found in $dir";
+        exit 1;
+      fi;
+      cd - > /dev/null || exit 1;
     done
 
 check-upstream:
