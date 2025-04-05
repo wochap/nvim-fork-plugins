@@ -28,11 +28,11 @@ rebase-all:
       cd "$dir" || exit 1;
       git fetch upstream;
       if git show-ref --verify --quiet refs/remotes/upstream/main; then
-        git rebase upstream/main || { echo "Rebase failed in $dir"; exit 1; };
+        git rebase upstream/main || { echo "{{{{ style('error') }}}}Rebase failed in $dir{{ NORMAL }}"; exit 1; };
       elif git show-ref --verify --quiet refs/remotes/upstream/master; then
-        git rebase upstream/master || { echo "Rebase failed in $dir"; exit 1; };
+        git rebase upstream/master || { echo "{{{{ style('error') }}}}Rebase failed in $dir{{ NORMAL }}"; exit 1; };
       else
-        echo "Neither upstream/main nor upstream/master found in $dir";
+        echo "{{ style('error') }}Neither upstream/main nor upstream/master found in $dir{{ NORMAL }}";
         exit 1;
       fi;
       cd - > /dev/null || exit 1;
