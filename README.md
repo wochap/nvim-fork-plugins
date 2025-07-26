@@ -10,4 +10,5 @@ $ just init
 
 $ just check-upstream
 $ just rebase-all
+$ just rebase {{repository_folder_name}}
 ```
