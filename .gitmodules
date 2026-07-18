@@ -1,9 +1,6 @@
 [submodule "nvim-window-picker"]
 	path = nvim-window-picker
 	url = git@github.com:wochap/nvim-window-picker.git
-[submodule "img-clip.nvim"]
-	path = img-clip.nvim
-	url = git@github.com:wochap/img-clip.nvim.git
 [submodule "nvim-treesitter-context"]
 	path = nvim-treesitter-context
 	url = git@github.com:wochap/nvim-treesitter-context.git

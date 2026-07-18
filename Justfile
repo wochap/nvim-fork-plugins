@@ -9,14 +9,13 @@ _update_submodule_remote repository_name remote_user:
 init:
     git submodule update --init --recursive
 
-    just _update_submodule_remote nvim-window-picker s1n7ax
-    just _update_submodule_remote img-clip.nvim HakonHarnes
-    just _update_submodule_remote nvim-treesitter-context nvim-treesitter
+    just _update_submodule_remote bufferline.nvim akinsho
     just _update_submodule_remote git-conflict.nvim akinsho
     just _update_submodule_remote lsp-lens.nvim VidocqH
-    just _update_submodule_remote bufferline.nvim akinsho
     just _update_submodule_remote noice.nvim folke
     just _update_submodule_remote nvim-highlight-colors brenoprata10
+    just _update_submodule_remote nvim-treesitter-context nvim-treesitter
+    just _update_submodule_remote nvim-window-picker s1n7ax
 
 # Rebase a specific submodule against its upstream repository
 rebase repository_name:

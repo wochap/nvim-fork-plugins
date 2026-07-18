@@ -31,4 +31,5 @@ $ git submodule deinit -f -- dircolors
 $ git rm -f dircolors
 $ rm -rf .git/modules/dircolors
 # $ git config -f .gitmodules --remove-section submodule.dircolors
+# delete it from init block in Justfile
 ```
