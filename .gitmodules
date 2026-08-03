@@ -19,3 +19,6 @@
 [submodule "nvim-highlight-colors"]
 	path = nvim-highlight-colors
 	url = git@github.com:wochap/nvim-highlight-colors.git
+[submodule "notmuch.nvim"]
+	path = notmuch.nvim
+	url = git@github.com:wochap/notmuch.nvim.git

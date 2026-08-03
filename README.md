@@ -19,8 +19,8 @@ $ just rebase-all
 
 ```sh
 $ git submodule add git@github.com:wochap/dircolors.git
+# update init fn in Justfile, and then run
 $ just init
-# then update init in Justfile
 ```
 
 ## Deleting forks
