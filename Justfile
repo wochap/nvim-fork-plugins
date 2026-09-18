@@ -16,7 +16,6 @@ init:
     just _update_submodule_remote nvim-highlight-colors brenoprata10
     just _update_submodule_remote nvim-treesitter-context nvim-treesitter
     just _update_submodule_remote nvim-window-picker s1n7ax
-    just _update_submodule_remote notmuch.nvim yousefakbar
 
 # Rebase a specific submodule against its upstream repository
 rebase repository_name:
